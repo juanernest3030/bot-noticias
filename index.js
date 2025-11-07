@@ -64,12 +64,11 @@ async function revisarNoticias() {
   if (nueva) {
     ultimosEnlaces.unshift(nueva.link);
 
-    const canal = client.channels.cache.find(c => c.name === '📰┃noticias-del-mundo' && c.type === 'GUILD_TEXT');
-    if (canal) {
-      canal.send(nueva.link); // Solo el enlace, sin texto extra
-    } else {
-      console.warn('⚠️ Canal 📰┃noticias-del-mundo no encontrado');
-    }
+   try {
+  const canal = await client.channels.fetch('1329577014029582397');
+  canal.send(nueva.link);
+} catch (err) {
+  console.warn('⚠️ No se pudo acceder al canal por ID:', err);
   }
 }
 
