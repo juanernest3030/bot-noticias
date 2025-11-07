@@ -37,12 +37,3 @@ Bot de Discord que muestra titulares recientes de BBC Mundo directamente en tu s
    - Key: `TOKEN`  
    - Value: pega el token que copiaste del Developer Portal
 3. Haz clic en **"Add secret"**
-
----
-
-### 4. Instalar Dependencias
-
-En la consola de Replit:
-
-```bash
-npm install
