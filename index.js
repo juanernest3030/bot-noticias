@@ -9,6 +9,8 @@ const client = new Client({
 
 client.once('ready', () => {
   console.log(`✅ Bot conectado como ${client.user.tag}`);
+
+  setInterval(revisarNoticias, 5 * 60 * 1000);
 });
 
 client.on('messageCreate', async (message) => {
