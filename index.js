@@ -73,8 +73,5 @@ async function revisarNoticias() {
   }
 }
 
-// Ejecutar cada 5 minutos
-setInterval(revisarNoticias, 5 * 60 * 1000);
-
 
 client.login(process.env.TOKEN);
