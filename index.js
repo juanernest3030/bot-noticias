@@ -70,7 +70,6 @@ async function revisarNoticias() {
 } catch (err) {
   console.warn('⚠️ No se pudo acceder al canal por ID:', err);
   }
-}
-
+});
 
 client.login(process.env.TOKEN);
