@@ -11,4 +11,9 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`🌐 Servidor web activo en puerto ${port}`);
 });
 
-require('./index');
+try {
+  require('./index');
+  console.log('✅ Bot iniciado desde server.js');
+} catch (err) {
+  console.error('❌ Error al iniciar el bot:', err);
+}
