@@ -66,7 +66,7 @@ async function revisarNoticias() {
     if (canal) {
       canal.send(nueva.link); // Solo el enlace, sin texto extra
     } else {
-      console.warn('⚠️ Canal #noticias no encontrado');
+      console.warn('⚠️ Canal 📰┃noticias-del-mundo no encontrado');
     }
   }
 }
