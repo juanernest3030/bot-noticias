@@ -64,12 +64,21 @@ async function revisarNoticias() {
   if (nueva) {
     ultimosEnlaces.unshift(nueva.link);
 
-   try {
-  const canal = await client.channels.fetch('1329577014029582397');
-  canal.send(nueva.link);
-} catch (err) {
-  console.warn('⚠️ No se pudo acceder al canal por ID:', err);
+async function revisarNoticias() {
+  const noticias = await obtenerNoticiasRSS();
+  const nueva = noticias.find(n => !ultimosEnlaces.includes(n.link));
+
+  if (nueva) {
+    ultimosEnlaces.unshift(nueva.link);
+
+    try {
+      const canal = await client.channels.fetch('1329577014029582397');
+      canal.send(nueva.link);
+    } catch (err) {
+      console.warn('⚠️ No se pudo acceder al canal por ID:', err);
+    }
   }
-});
+}
+
 
 client.login(process.env.TOKEN);
