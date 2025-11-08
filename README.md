@@ -27,13 +27,3 @@ Bot de Discord que muestra titulares recientes de BBC Mundo directamente en tu s
    ✅ Send Messages  
 4. Copia la URL generada y ábrela en tu navegador
 5. Selecciona el servidor donde quieres añadir el bot
-
----
-
-### 3. Configurar el Token en Replit
-
-1. En Replit, haz clic en el icono de candado (🔒) o ve a **Tools → Secrets**
-2. Agrega un nuevo secret:
-   - Key: `TOKEN`  
-   - Value: pega el token que copiaste del Developer Portal
-3. Haz clic en **"Add secret"**
