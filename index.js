@@ -73,6 +73,12 @@ async function revisarNoticias() {
   }
 }
 
-
-
 client.login(process.env.TOKEN);
+
+// 🕸️ Simulación de servidor web para Render
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => res.send('Bot de radio activo.'));
+app.listen(PORT, () => console.log(`🌐 Servidor web activo en puerto ${PORT}`));
