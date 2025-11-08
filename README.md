@@ -12,7 +12,7 @@ Bot minimalista para publicar noticias en Discord usando fuentes RSS. Diseñado 
 
 ## 📁 Estructura del proyecto
 
-bot-noticias/
+bot-noticias/ 
 ├── index.js # Lógica principal del bot 
 ├── server.js # Servidor Express para mantener activo el bot 
 ├── index.html # Página simple para el servidor web 
@@ -20,8 +20,6 @@ bot-noticias/
 ├── .env # Variables sensibles (no se sube al repo) 
 ├── .gitignore # Ignora node_modules y .env 
 └── .replit # Configuración para Replit
-
-Código
 
 ## ⚙️ Configuración
 
