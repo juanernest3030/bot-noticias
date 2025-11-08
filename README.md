@@ -1,29 +1,58 @@
-📰 Discord Noticias Bot  
-Bot de Discord que muestra titulares recientes de BBC Mundo directamente en tu servidor.
+# 📰 bot-noticias
 
----
+Bot minimalista para publicar noticias en Discord usando fuentes RSS. Diseñado para funcionar 24/7 en entornos gratuitos como Replit o Render, con estructura clara y sin dependencias innecesarias.
 
-🚀 Configuración Rápida
+## 🚀 Características
 
-### 1. Crear una Aplicación de Bot en Discord
+- Publica automáticamente titulares desde BBC Mundo cada 5 minutos.
+- Comando manual `$noticias` para ver los últimos 5 enlaces.
+- Solo envía el link, aprovechando la vista previa de Discord.
+- Comando `$help` para mostrar los comandos disponibles.
+- Servidor web activo para mantener el bot despierto en Replit.
 
-1. Ve a [Discord Developer Portal](https://discord.com/developers/applications)
-2. Haz clic en **"New Application"** y dale un nombre (ej: Bot NOTICIAS)
-3. En el menú lateral, ve a **"Bot"** → haz clic en **"Add Bot"** y confirma
-4. En "Privileged Gateway Intents", activa:
-   ✅ MESSAGE CONTENT INTENT  
-   ✅ SERVER MEMBERS INTENT  
-5. Copia el token del bot (haz clic en "Reset Token" si es necesario)
+## 📁 Estructura del proyecto
 
----
+bot-noticias/ ├── index.js # Lógica principal del bot ├── server.js # Servidor Express para mantener activo el bot ├── index.html # Página simple para el servidor web ├── package.json # Dependencias y script de inicio ├── .env # Variables sensibles (no se sube al repo) ├── .gitignore # Ignora node_modules y .env └── .replit # Configuración para Replit
 
-### 2. Invitar el Bot a tu Servidor
+Código
 
-1. En el Developer Portal, ve a **OAuth2 → URL Generator**
-2. Selecciona los siguientes scopes:
-   ✅ bot  
-3. Selecciona los siguientes permisos:
-   ✅ Read Messages/View Channels  
-   ✅ Send Messages  
-4. Copia la URL generada y ábrela en tu navegador
-5. Selecciona el servidor donde quieres añadir el bot
+## ⚙️ Configuración
+
+1. Cloná el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/bot-noticias.git
+cd bot-noticias
+npm install
+Crea un archivo .env con tus credenciales:
+
+env
+TOKEN=tu_token_de_discord
+El ID del canal está embebido en el código (1329577014029582397). Podés cambiarlo directamente en index.js.
+
+🖥️ Ejecución local
+bash
+node server.js
+🧠 Comandos disponibles
+$noticias → Muestra los últimos 5 titulares de BBC Mundo.
+
+$help → Muestra la lista de comandos disponibles.
+
+🔄 Replit
+Este bot está optimizado para Replit:
+
+.replit configura Node.js 20 y ejecuta server.js.
+
+El servidor Express mantiene el bot activo.
+
+El archivo index.html responde en la raíz con “Bot activo”.
+
+🧼 Buenas prácticas
+Solo archivos esenciales.
+
+Sin texto extra en los mensajes: solo el enlace.
+
+Código modular y fácil de mantener.
+
+📄 Licencia
+MIT — libre para usar, modificar y compartir.
